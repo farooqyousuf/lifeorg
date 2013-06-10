@@ -17,11 +17,11 @@
 //= require fullcalendar
 //= require_tree .
 
-<script>
-$(document).ready(function(){
-  $('input').iCheck({
-    checkboxClass: 'icheckbox_flat-red',
-    radioClass: 'iradio_flat-red'
-  });
-});
-</script>    	
+// <script>
+// $(document).ready(function(){
+//   $('input').iCheck({
+//     checkboxClass: 'icheckbox_flat-red',
+//     radioClass: 'iradio_flat-red'
+//   });
+// });
+// </script>    	

@@ -1,0 +1,101 @@
+<div class="block span8">
+<p class="block-heading">
+	<span>Calendar</span>
+	</p>
+		<div class="block-body">
+			<div id='calendar'></div>
+
+		</div>
+</div>
+
+<!-- Todo List -->
+<div class="block span4 todo">
+			<div class="block-heading">
+				<span class="block-icon pull-right">
+        	<%= link_to 'Add New', new_event_path %>
+				</span>
+        
+        <a href="#collapse-todo" data-toggle="collapse">Tasks</a>
+			</div>
+      <div id="collapse-todo" class="block-body collapse in">   
+
+			<section id="todoapp">
+					<header id="header">
+					<section id="main">
+        <ul id="todo-list">			 
+			
+			<% @events.each do |event| %>
+			<li>
+				<div class="view">
+					<div class="todo-check"><input class="toggle" type="checkbox"></div>
+			    <label><%= link_to event.title, event %></label>
+			    <!-- <%= event.description %> -->
+			    <!-- <%= link_to 'Edit', edit_event_path(event) %>
+			    <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+				</div>
+			</li>
+			
+			<% end %>
+		</div>
+		
+		</ul>
+</section>
+</header>
+</section>
+</div>
+
+<!-- Goals List -->
+<div class="block span4 todo">
+			<div class="block-heading">
+				<span class="block-icon pull-right">
+        	<%= link_to 'Add New', new_event_path %>
+				</span>
+        
+        <a href="#collapse-task" data-toggle="collapse">Goals</a>
+			</div>
+      <div id="collapse-task" class="block-body collapse in">   
+
+			<section id="todoapp">
+					<header id="header">
+					<section id="main">
+        <ul id="todo-list">			 
+			
+			<% @events.each do |event| %>
+			<li>
+				<div class="view">
+					<div class="todo-check"><input class="toggle" type="checkbox"></div>
+			    <label><%= link_to event.title, event %></label>
+			    <!-- <%= event.description %> -->
+			    <!-- <%= link_to 'Edit', edit_event_path(event) %>
+			    <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+				</div>
+			</li>
+			
+			<% end %>
+		</div>
+		
+		</ul>
+</section>
+</header>
+</section>
+</div>
+
+
+<div class="block span4 notes">
+    <div class="block-heading">
+      <span class="block-icon pull-right">
+          <a href="#" class="demo-cancel-click" rel="tooltip" title="Save now"><i class="icon-save"></i></a>
+      </span>
+
+      <a href="#collapse-task" data-toggle="collapse">Note</a>
+    </div> 
+    <div id="collapse-task" class="block-body collapse in">   
+
+      <textarea cols="60" rows="10"></textarea>
+
+    </div>
+</div> 
+
+</div>
+
+</div>

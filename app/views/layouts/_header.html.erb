@@ -1,0 +1,19 @@
+<section class="container">
+   <nav class="navbar">
+           <div class="container">
+               <a href="/" class="brand">LifeOrg</a>
+               <ul class="nav">
+										<% if user_signed_in? %>
+										 		<li><%= link_to 'Home',  events_path %></li>
+                      	<li><%= link_to 'About',  '#' %></li>
+                        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+										<% else %>
+                    		<li class="active"><%= link_to 'Home', root_path %></li>
+                        <li><%= link_to 'Login', new_user_session_path %></li>
+												<li><%= link_to 'Sign Up!', new_user_registration_path %></li>
+										<% end %>
+               </ul>
+       </div>
+   </nav>
+</section>

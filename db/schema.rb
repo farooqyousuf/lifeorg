@@ -26,16 +26,6 @@ ActiveRecord::Schema.define(:version => 20130610174711) do
 
   add_index "events", ["user_id"], :name => "index_events_on_user_id"
 
-  create_table "tasks", :force => true do |t|
-    t.string   "task"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-    t.string   "description"
-    t.string   "start"
-    t.string   "end"
-    t.string   "allDay"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false

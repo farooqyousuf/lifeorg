@@ -12,8 +12,11 @@
 <div class="block span4 todo">
 			<div class="block-heading">
 				<span class="block-icon pull-right">
-        	<%= link_to 'Add New', new_event_path %>
+        	<%= link_to 'Add New', new_event_path, {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'} %>
 				</span>
+				
+				<div id="modal-window" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+				
         
         <a href="#collapse-todo" data-toggle="collapse">Tasks</a>
 			</div>
@@ -45,7 +48,7 @@
 </div>
 
 <!-- Goals List -->
-<div class="block span4 todo">
+<!-- <div class="block span4 todo">
 			<div class="block-heading">
 				<span class="block-icon pull-right">
         	<%= link_to 'Add New', new_event_path %>
@@ -64,11 +67,11 @@
 			<li>
 				<div class="view">
 					<div class="todo-check"><input class="toggle" type="checkbox"></div>
-			    <label><%= link_to event.title, event %></label>
+			    <label><%= link_to event.title, event %></label> -->
 			    <!-- <%= event.description %> -->
 			    <!-- <%= link_to 'Edit', edit_event_path(event) %>
 			    <%= link_to 'Delete', event, method: :delete, data: { confirm: 'Are you sure?' } %> -->
-				</div>
+				<!-- </div>
 			</li>
 			
 			<% end %>
@@ -78,7 +81,7 @@
 </section>
 </header>
 </section>
-</div>
+</div> -->
 
 
 <div class="block span4 notes">

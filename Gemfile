@@ -3,13 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'twitter-bootstrap-rails'
 gem 'coffee-rails', '~> 3.2.1'
-
-
+gem 'simple_form'
+gem 'bootstrap-datepicker-rails'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
 end
 
 group :production do
@@ -20,7 +21,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-
+  gem 'bootstrap-sass', '~> 3.0.3.0'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
